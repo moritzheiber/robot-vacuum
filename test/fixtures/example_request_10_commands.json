@@ -1,0 +1,48 @@
+{
+    "start": {
+        "x": 0,
+        "y": 0
+    },
+    "commands": [
+        {
+            "direction": "west",
+            "steps": 120
+        },
+        {
+            "direction": "north",
+            "steps": 345
+        },
+        {
+            "direction": "south",
+            "steps": 1200
+        },
+        {
+            "direction": "west",
+            "steps": 2112
+        },
+        {
+            "direction": "west",
+            "steps": 20
+        },
+        {
+            "direction": "south",
+            "steps": 3333
+        },
+        {
+            "direction": "west",
+            "steps": 2
+        },
+        {
+            "direction": "east",
+            "steps": 8900
+        },
+        {
+            "direction": "north",
+            "steps": 2
+        },
+        {
+            "direction": "east",
+            "steps": 1
+        }
+    ]
+}
