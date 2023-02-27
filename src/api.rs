@@ -4,7 +4,7 @@ use axum::{
 };
 use chrono::{DateTime, Local};
 use serde::{Deserialize, Serialize};
-use sqlx::{Any, Pool};
+use sqlx::{Pool, Postgres};
 
 use crate::{
     execution::Execution,
@@ -92,7 +92,7 @@ impl From<Execution> for Response {
     controllers should be). The heavy lifting should be done by the model itself.
 */
 pub async fn handle_enter_path(
-    State(pool): State<Pool<Any>>,
+    State(pool): State<Pool<Postgres>>,
     Json(request): Json<Request>,
 ) -> ResponseJson<Response> {
     let execution = Execution::default();

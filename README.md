@@ -132,10 +132,10 @@ $ docker compose up
 
 *Note: This assumes you're using the Docker Compose plugin. If you're using the stand-alone binary distribution of `compose` please use `docker-compose` instead of `docker compose` whenever working with `compose`.*
 
-The `robot-vacuum` service will be available shortly after the database has finished initializing and can be reached via port `5000`. You can use one of the fixtures to test its functionality:
+The `robot-vacuum` service will be available shortly after the database has finished initializing and can be reached via port `8000`. You can use one of the fixtures to test its functionality:
 
 ```console
-$ curl --json @test/fixtures/example_request_positive.json http://localhost:5000/path
+$ curl --json @test/fixtures/example_request_positive.json http://localhost:8000/path
 {"id":1,"timestamp":"2022-12-15T14:16:15.189809+01:00","commands":2,"result":3,"duration":"0.000001"}
 ```
 

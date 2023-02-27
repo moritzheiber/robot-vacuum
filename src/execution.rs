@@ -1,6 +1,6 @@
 use chrono::{DateTime, Utc};
 use serde::Serialize;
-use sqlx::{error::Error as SqlError, Any, FromRow, Pool};
+use sqlx::{error::Error as SqlError, FromRow, Pool, Postgres};
 use std::collections::HashSet;
 
 use crate::{api::Request, types::Position};
@@ -83,7 +83,7 @@ impl Execution {
         because it allows for the code be more readable. Also, this is probably one of the few
         places you would want to have proper error handling at in the future.
     */
-    pub async fn save(&self, state: Pool<Any>) -> Result<Execution, SqlError> {
+    pub async fn save(&self, state: Pool<Postgres>) -> Result<Execution, SqlError> {
         let result: Execution = sqlx::query_as(
         r#"insert into executions (commands, result, duration) values ($1, $2, $3) returning *"#,
     )
